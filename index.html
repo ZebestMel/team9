@@ -136,8 +136,7 @@ function getLocation()
   alert("hola ");
   if (navigator.geolocation)
     {
-    alert(navigator.geolocation.getCurrentPosition);
-    showPosition(navigator.geolocation.getCurrentPosition());
+   navigator.geolocation.getCurrentPosition(showPosition,showError);
     alert("Si pasa");
     }
   else{
