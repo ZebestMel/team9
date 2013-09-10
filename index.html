@@ -13,31 +13,7 @@ var icon = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/micon
             var currentPopup;
             var bounds = new google.maps.LatLngBounds();
 var x=document.getElementById("demo");
- function addMarker(lat, lng, info) {
-                var pt = new google.maps.LatLng(lat, lng);
-                bounds.extend(pt);
-                var marker = new google.maps.Marker({
-                    position: pt,
-                    icon: icon,
-                    map: map
-                });
-                var popup = new google.maps.InfoWindow({
-                    content: info,
-                    maxWidth: 300
-                });
-                google.maps.event.addListener(marker, "click", function() {
-                    if (currentPopup != null) {
-                        currentPopup.close();
-                        currentPopup = null;
-                    }
-                    popup.open(map, marker);
-                    currentPopup = popup;
-                });
-                google.maps.event.addListener(popup, "closeclick", function() {
-                    map.panTo(center);
-                    currentPopup = null;
-                });
-            } 
+ 
             function addMarker(lat, lng, info) {
                 var pt = new google.maps.LatLng(lat, lng);
                 bounds.extend(pt);
