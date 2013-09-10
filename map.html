@@ -78,7 +78,7 @@
 
 <?php
 
-$query = mysql_query("SELECT lattitude, longitude FROM user u 
+$query = mysql_query("SELECT lattitude, longitude FROM Glasswater u 
                       INER JOIN village v
                        ON u.village = v.id")or die(mysql_error());
 while($row = mysql_fetch_array($query))
