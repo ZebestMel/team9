@@ -76,23 +76,7 @@
                 });
 
 
-<?php
 
-$query = mysql_query("SELECT lattitude, longitude FROM Glasswater");
-while($row = mysql_fetch_array($query))
-{
- // $name = $row['user_name'];
-  $lat = $row['lattitude'];
-  $lon = $row['longitude'];
-  //$desc = $row['desc'];
-//'<b>$name</b>
-
-
-  echo("addMarker($lat, $lon <br />');\n");
-
-}
-
-?>
  center = bounds.getCenter();
      map.fitBounds(bounds);
 
@@ -100,7 +84,7 @@ while($row = mysql_fetch_array($query))
 </script>
 </head>
 <body onload="initMap()" style="margin:0px; border:0px; padding:0px;">
-<?php  /*require_once('header.php');*/ ?>
+
 <div id="wrapper">
     <div id="page-wrapper">
       <div id="page">
@@ -111,6 +95,6 @@ while($row = mysql_fetch_array($query))
         </div>
       </div>
    </div>
-   <?php /*require_once('footer.php');*/ ?>
+   
  </body>
 </html>
