@@ -5,6 +5,13 @@
 <button onclick="getLocation()">Try It</button>
 
 <script>
+var icon = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/micons/blue.png",
+                       new google.maps.Size(32, 32), new google.maps.Point(0, 0),
+                       new google.maps.Point(16, 32));
+            var center = null;
+            var map = null;
+            var currentPopup;
+            var bounds = new google.maps.LatLngBounds();
 var x=document.getElementById("demo");
 function getLocation()
   {
