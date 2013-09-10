@@ -1,153 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<title>Problema</title>
-	<link rel="StyleSheet" href="estilos.css" type="text/css">
-  </head>
-  <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  align="center">
-
-
-
-
-     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script>
-function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width(127)
-                    .height(142);
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-</script>
-
-
-
-     <div id="contenedor">
-	   <div id="cabecera">
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="200" id="FlashID" accesskey="1" tabindex="1" title="banner">
-            <param name="movie" value="images/banner.swf">
-            <param name="quality" value="high">
-            <param name="wmode" value="opaque">
-            <param name="swfversion" value="6.0.65.0">
-            <!-- Esta etiqueta param indica a los usuarios de Flash Player 6.0 r65 o posterior que descarguen la versión más reciente de Flash Player. Elimínela si no desea que los usuarios vean el mensaje. -->
-            <param name="expressinstall" value="Scripts/expressInstall.swf">
-            <!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
-            <!--[if !IE]>-->
-            <object type="application/x-shockwave-flash" data="images/banner.swf" width="1000" height="200">
-              <!--<![endif]-->
-              <param name="quality" value="high">
-              <param name="wmode" value="opaque">
-              <param name="swfversion" value="6.0.65.0">
-              <param name="expressinstall" value="Scripts/expressInstall.swf">
-              <!-- El navegador muestra el siguiente contenido alternativo para usuarios con Flash Player 6.0 o versiones anteriores. -->
-              <div>
- 		<font face="univers" size="6" color="blue"> 
-		<h4>1)Seleccione la opcion de "permitir contenido bloqueado" en su navegador para que pueda ver el contenido.</h4>
-                <h4>2)Si lo anterior no funciona, el contenido de esta p&aacute;gina requiere una versi&oacute;n m&aacute;s reciente de Adobe Flash Player.</h4>
-                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Obtener Adobe Flash Player" width="112" height="33" /></a></p>
-		</font>
-              </div>
-              <!--[if !IE]>-->
-            </object>
-            <!--<![endif]-->
-          </object>
-	   </div>
-
-
-<div id="menu">
-         <div class="Navigation">
-		<div id="NavigationInside">
-		    
-                    <div id="menu-texto">			
-                       <ul>
-                       <li>
-        	       </li>
-                       <li><a href="#"><img src="images/home.png" border="none"></a>   	  		
-                      </li>
-                       <li><a href="#"><img src="images/water.png" border="none"></a></li>
-	 	       
-        	       <li><a href="#"><img src="images/whatsaround.png" border="none"></a>
-           	       </li>
-	              
-		    </ul>
-                </div>
-           </div>
-	  </div>
-       </div>
-
-
-
-
-	
-	<div id="columna1">
-	   <img src="images/importanceofwater.png" border="none">
-	   
-<center>
-
-<table id="Table_01" width="431" height="165" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td rowspan="3">
-			<img src="images/estructura_01.gif" width="20" height="165" alt=""></td>
-		<td colspan="3">
-			<img id="cuadro1" src="images/estructura_02.gif" width="143" height="11" alt=""></td>
-		<td rowspan="3">
-			<img src="images/estructura_03.gif" width="90" height="165" alt=""></td>
-		<td rowspan="3">
-			<img src="images/estructura_04.gif" width="143" height="165" alt=""></td>
-		<td rowspan="3">
-			<img src="images/estructura_05.gif" width="35" height="165" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="2">
-			<img id="cuadro3" src="images/estructura_06.gif" width="7" height="154" alt=""></td>
-		<td>
-			<img id="blah" src="images/estructura_07.gif" width="127" height="142" alt="your image" /></td>
-		<td rowspan="2">
-			<img id="cuadro4" src="images/estructura_08.gif" width="9" height="154" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img id="cuadro2" src="images/estructura_09.gif" width="127" height="12" alt=""></td>
-	</tr>
-</table>
-</center>
-<form name="myform" action="" method="POST">
-	<div>
-		Archivo: <input name="fichero" type="file" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);" /> 	<Br><br>
-		<input type="radio" name="group1" value="Safe water"> Safe water
-		<input type="radio" name="group1" value="Not safe water" checked> Not safe water <br><br>
-		<!--<input name="submit" type="submit" value="Continue">-->
-		<button onclick="getLocation()">Try It</button>		
-
+<body>
+<p id="demo">Click the button to get your coordinates:</p>
+<button onclick="getLocation()">Try It</button>
 <script>
 
 var x=document.getElementById("demo");
 function getLocation()
   {
   alert("yo wat");
-  alert("hola ");
   if (navigator.geolocation)
     {
-   navigator.geolocation.getCurrentPosition(showPosition,showError);
-    alert("Si pasa");
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
     }
-  else{
-alert("no entra");
-x.innerHTML="Geolocation is not supported by this browser.";}
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
   }
 function showPosition(position)
   {
   x.innerHTML="Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;	
-  
   }
 function showError(error)
   {
@@ -168,27 +39,5 @@ function showError(error)
     }
   }
 </script>
-	</div>
-</form>
-
-
-	</div>
-
-	<div id="columna2">
-	   <img src="images/statistics.png" border="none">
-	   <a href="#"><img src="images/grafico.png" border="none" class="imgder"></a>
-	</div>
-	<div id="pie">
-	   
-	   <div id="pie-menu-texto">
-            	    
-	    <a href=#>Home</a>
-	    <a href=#>Water</a>
-	    <a href=#>What's around?</a>
-            
-          </div>
-	   
-	</div>
-    </div>
-  </body>
+</body>
 </html>
